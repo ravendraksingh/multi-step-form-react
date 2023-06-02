@@ -1,0 +1,32 @@
+.planbox {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  /* border: 2px solid hsl(243, 100%, 62%); */
+  border: 1.5px solid rgb(220, 220, 220);
+  border-radius: 6px;
+}
+.blue-border {
+  border: 2px solid hsl(243, 100%, 62%);
+}
+.planpic {
+  height: 48px;
+  padding-right: 16px;
+}
+.comments {
+  font-size: 12px;
+  font-weight: 300;
+  color: navy;
+}
+
+@media screen and (min-width: 576px) {
+  .planbox {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    gap: 1rem;
+    border: 1.75px solid var(--color-gray);
+  }
+  .plandetails {
+    padding-top: 32px;
+  }
+}

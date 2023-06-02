@@ -1,0 +1,147 @@
+:root {
+  --color-gray: hsl(231, 11%, 63%);
+  --color-light-gray: hsl(229, 24%, 87%);
+  --color-mangolia: hsl(217, 100%, 97%);
+  --color-alabaster: hsl(231, 100%, 99%);
+  --color-navy: hsl(213, 96%, 18%);
+  --color-navy-light: hsl(213, 96%, 36%);
+  --color-blue: hsl(243, 100%, 62%);
+  --color-light-blue: hsl(228, 100%, 84%);
+  --color-very-light-blue: hsl(206, 94%, 87%);
+  --color-strawberry-red: hsl(354, 84%, 57%);
+}
+/* base css */
+body {
+  background-color: hsl(217, 100%, 97%);
+}
+input[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* define some background colors */
+.bg__navy {
+  background-color: var(--color-navy);
+}
+.bg__mangolia {
+  background-color: var(--color-mangolia);
+}
+.color__blue {
+  color: var(--color-blue);
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+.sub-heading {
+  font-weight: 400;
+  color: var(--color-gray);
+}
+.main-grid {
+  display: grid;
+  /* height: 450px; */
+  height: auto;
+  align-items: stretch;
+  grid-template-columns: 1fr;
+}
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 20vh;
+  background-size: cover;
+  z-index: 0;
+}
+.right {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  margin: 0 1em;
+  padding: 2em;
+  border-radius: 0.5rem;
+  position: relative;
+  top: -8vh;
+  z-index: 5;
+}
+.stepper {
+  margin-top: 3rem;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 1rem;
+}
+.active-btn {
+  color: white;
+  background-color: var(--color-navy-light);
+  border: 1px solid var(--color-navy-light);
+  box-shadow: none;
+  width: 120px;
+}
+.active-btn:focus,
+.active-btn:hover {
+  box-shadow: none;
+  background-color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+}
+.thank-you-img {
+  height: 6rem;
+}
+
+@media screen and (min-width: 576px) {
+  .main-grid {
+    max-width: 800px;
+    margin: 4rem auto;
+    height: auto;
+    min-height: 450px;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+  }
+  .stepper {
+    margin: 0 auto;
+  }
+  .right {
+    background-color: white;
+    margin: 0 1rem;
+    padding: 0;
+    border-radius: 12px;
+    position: relative;
+    top: 0;
+    z-index: 0;
+  }
+  .actions {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+}

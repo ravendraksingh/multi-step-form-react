@@ -1,0 +1,24 @@
+.plans-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+.switch-container {
+}
+
+@media screen and (min-width: 576px) {
+  .plans-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1.5em;
+  }
+  .switch-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 0.5em 0;
+    background-color: var(--color-mangolia);
+    border-radius: 0.5em;
+  }
+}
